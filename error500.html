@@ -7,15 +7,21 @@
     h1 { font-size: 50px; }
     body { font: 20px Helvetica, sans-serif; color: #333; }
     article { display: block; text-align: left; width: 650px; margin: 0 auto; }
-    article > div > button {
-     padding: 2px;
-     border-radius: 25px;
-     background-color: #333;
-     color:#dc8100;
+    article > div > div.btn {
+     text-align: center;
     }
-    article > div > button:hover {
-     background-color: white;
-     color:#333;
+    article > div > div.btn > button {
+     padding: 0.5rem 2rem;
+     border-radius: 5px;
+     background-color: #dc8100;
+     color: white;
+     border: none;
+    }
+    article > div > div.btn > button:hover {
+     background-color: #ffe7b2;
+     color: #333;
+     font-weight: bold;
+     cursor: pointer;
     }
     a { color: #dc8100; text-decoration: none; }
     a:hover { color: #333; text-decoration: none; }
@@ -42,7 +48,9 @@
     <div>
         <p>任何最新消息請留守<a href="https://www.facebook.com/mh108sh">我們的粉專</a>，若有任何需要，也可隨時聯繫客服。</p>
         <p>我們會盡速恢復服務！造成任何不便, 請望海涵。</p>
-        <button onclick="location.href = 'https://www.facebook.com/mh108sh';">查詢最新動向</button>
+        <div class="btn">
+         <button onclick="location.href = 'https://www.facebook.com/mh108sh';">查詢最新動向</button>
+        </div>
         <p>&mdash; 夢幻水滸管理團隊敬上</p>
     </div>
 </article>
