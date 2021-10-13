@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+       
         h1 {
             font-size: 50px;
         }
@@ -15,6 +16,11 @@
             font: 20px Helvetica, sans-serif;
             color: #333;
             background-color: white;
+        }
+
+        img.mhsh_signature {
+            width: 50%;
+            max-width:20vw;
         }
 
         article {
@@ -68,6 +74,25 @@
         div.wrapper * ul {
             list-style: none !important;
         }
+        @media only screen and (max-width: 600px) {
+            body {
+                padding: 0px !important;
+                margin: 0px !important;
+                font: 20px Helvetica, sans-serif;
+                color: #333;
+                background-color: white;
+                width: 100%;
+            }
+            h1 {
+                font-size: 35px;
+            }
+            img.mhsh_sign {
+                width: 100%;
+            }
+            article {
+                width: 100%;
+            }
+        }
     </style>
     <title>Site Maintenance - Unable to reach server</title>
 </head>
@@ -83,7 +108,7 @@
                 <button onclick="location.href = 'https://www.facebook.com/mh108sh';">查詢最新消息</button>
             </div>
             <p>&mdash; 夢幻水滸管理團隊敬上 &mdash;</p>
-            <img style="width:50%; max-width:20vw;" src="/mhsh_signature.png">
+            <img class="mhsh_sign" src="/mhsh_signature.png">
         </div>
     </article>
     <div>
