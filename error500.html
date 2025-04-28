@@ -122,6 +122,7 @@
         const currentDomain = window.location.hostname;
 
         if (!currentDomain.includes(targetDomain)) {
+            document.title = "夢幻水滸 - 舊址.online停用";,
             const messageDiv = document.getElementById('title');
             const countdownSpan = document.getElementById('message');
             let countdown = 10;
