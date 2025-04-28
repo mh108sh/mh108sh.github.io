@@ -99,9 +99,9 @@
 </head>
 
 <body>
-    <h1>⚠️伺服器維護中⚠️</h1>
+    <h1 id="title">⚠️伺服器維護中⚠️</h1>
     <article>
-        <h2>我們會盡快恢復服務！</h2>
+        <h2 id="message">我們會盡快恢復服務！</h2>
         <div>
             <p>任何最新消息，請留守<a href="https://www.facebook.com/mh108sh/posts">我們的粉專</a>，若有任何需要，也可隨時聯繫<a href="https://m.me/mh108sh">客服</a>。</p>
             <p>造成任何不便, 請多多包涵！</p>
@@ -116,5 +116,27 @@
         <div class="wrapper">::CLOUDFLARE_ERROR_500S_BOX::</div>
     </div>
 </body>
+<script>
+    (function () {
+        const targetDomain = "mhsh108.com";
+        const currentDomain = window.location.hostname;
 
+        if (!currentDomain.includes(targetDomain)) {
+            const messageDiv = document.getElementById('title');
+            const countdownSpan = document.getElementById('message');
+            let countdown = 10;
+
+            // messageDiv.style.display = 'block';
+            messageDiv.textContent = '⚠️ https://mhsh108.online 已停止使用⚠️';
+            const interval = setInterval(() => {
+                countdown--;
+                countdownSpan.textContent = '您將在 ' + countdown + '秒後自動跳轉至新網址 https://mhsh108.com';
+                if (countdown <= 0) {
+                    clearInterval(interval);
+                    window.location.href = "https://mhsh108.com";
+                }
+            }, 1000);
+        }
+    })();
+</script>
 </html>
